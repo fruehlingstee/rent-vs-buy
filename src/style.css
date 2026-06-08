@@ -1,0 +1,309 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Hiragino Sans', 'Meiryo', sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+/* ─── ヘッダー ─── */
+header {
+  background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+header h1 span {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+header p {
+  opacity: 0.9;
+  font-size: 1rem;
+}
+
+/* ─── メイン ─── */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem 4rem;
+}
+
+/* ─── フォーム ─── */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+.form-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.form-section h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid;
+}
+
+.buy h2 {
+  border-color: #3b82f6;
+  color: #1d4ed8;
+}
+
+.rent h2 {
+  border-color: #f97316;
+  color: #ea580c;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  color: #475569;
+}
+
+input[type='number'] {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #1e293b;
+  background: #f8fafc;
+  transition: border-color 0.2s;
+  width: 100%;
+}
+
+.error-msg {
+  color: #dc2626;
+  font-size: 0.78rem;
+  min-height: 1em;
+}
+
+input[type='number']:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: white;
+}
+
+button[type='submit'] {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  background: #1d4ed8;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type='submit']:hover {
+  background: #1e40af;
+}
+
+/* ─── 広告枠 ─── */
+.ad-slot {
+  width: 100%;
+  min-height: 90px;
+  background: #f1f5f9;
+  border: 1px dashed #cbd5e1;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.ad-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  letter-spacing: 0.1em;
+}
+
+/* ─── 結果 ─── */
+.hidden {
+  display: none;
+}
+
+#result {
+  margin-top: 2rem;
+}
+
+.banner {
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.buy-wins {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.rent-wins {
+  background: #ffedd5;
+  color: #9a3412;
+}
+
+.share-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+#share-btn {
+  padding: 0.6rem 1.2rem;
+  background: #0f172a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#share-btn:hover {
+  background: #1e293b;
+}
+
+#share-feedback {
+  color: #16a34a;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.chart-wrap {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+/* ─── 内訳テーブル ─── */
+.table-wrap {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  margin-top: 1.5rem;
+}
+
+.table-wrap h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #475569;
+  margin-bottom: 1rem;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+thead th {
+  background: #f1f5f9;
+  padding: 0.6rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  color: #475569;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+tbody tr {
+  border-bottom: 1px solid #f1f5f9;
+  transition: background 0.15s;
+}
+
+tbody tr:hover {
+  background: #f8fafc;
+}
+
+tbody td {
+  padding: 0.6rem 1rem;
+  color: #1e293b;
+}
+
+.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.buy-text {
+  color: #1d4ed8;
+  font-weight: 600;
+}
+
+.rent-text {
+  color: #ea580c;
+  font-weight: 600;
+}
+
+.breakeven-row {
+  background: #f0fdf4 !important;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.badge-buy {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.badge-rent {
+  background: #ffedd5;
+  color: #ea580c;
+}
+
+.badge-cell {
+  text-align: center;
+}
